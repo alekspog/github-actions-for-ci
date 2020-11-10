@@ -32,6 +32,12 @@ jobs:
         node-version: [12.x, 14.x]
     steps:
     - uses: actions/checkout@v2
+    - name: Check the checkout path
+      run: |
+        echo ${PWD}
+        echo ${pwd}
+        echo "$(pwd)"
+        echo "$(PWD)"
     - uses: actions/download-artifact@master
       with:
         name: webpack artifacts
